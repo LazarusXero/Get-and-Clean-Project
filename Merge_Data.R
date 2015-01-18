@@ -23,15 +23,23 @@ merge_data <- function(){
         
         
         # read in training data from 'x_train.txt'
-        # read in training activity numbers from 'y_train.txt'
-        # read in training subject numbers from 'subject_train.txt'
+        train.data <- read.table("x_train.txt")
         
+        # read in training activity numbers from 'y_train.txt'
+        train.activity.numbers <- read.table("y_train.txt")
+        
+        # read in training subject numbers from 'subject_train.txt'
+        train.subject.number <- read.table("subject_train.txt")
+        
+        # merges the activity name in the activity number table in column 2
+        for(i in 1:nrow(train.activity.numbers)){
+                train.activity.numbers[i,2] <- activity.labels[train.activity.numbers[i,1],2]
+        }
         
         
         
         # actions to check code above
-        print(head(test.activity.numbers))
-        print(unique(test.activity.numbers))
+        print(unique(train.activity.numbers))
         
         
 }
