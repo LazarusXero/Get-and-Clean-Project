@@ -2,14 +2,14 @@
 ## This codebook will describe the methods I used to extract, clean, assemble and analyze the data for the Getting and Cleaning Data Course provided by Coursera.org through Johns Hopkins University.
 
 ## My Data
-* Extracting Data
+* Extracting the Data
 
-* Cleaning Data
+* Cleaning the Data
 
 * Assembling the Data
 
 * Analyzing the Data
 
 ## My Scripts
-* Functions
-* Descriptions
+* My Functions
+* Descriptions of Functions
