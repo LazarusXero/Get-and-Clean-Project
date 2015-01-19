@@ -1,4 +1,44 @@
-merge_data <- function(){
+---
+title: "CodeBook"
+author: "David P. Leonard"
+date: "Sunday, January 18, 2015"
+output: html_document
+---
+# Getting and Cleaning Data - Codebook
+This codebook will describe the methods I used to extract, clean, assemble and analyze the data for the Getting and Cleaning Data Course provided by Coursera.org through Johns Hopkins University.
+
+
+## <u>My Data</u>
+
+### Extracting the Data
+
+All data is being extracted from text files provided at the following link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Extract the ZIP file contents and (**!!VERY IMPORTANT!!**) place the following files into the **same directory** as the "merge_data.R"" file:
+
+1. subject_test.txt
+2. y_test.txt
+3. x_test.txt
+4. subject_train.txt
+5. y_train.txt
+6. x_train.txt
+7. features.txt
+
+### Cleaning the Data
+
+### Assembling the Data
+
+### Analyzing the Data
+
+
+## My Scripts
+
+### Merge_Data.R Function
+
+Here is the code for my merge_data.R function:
+
+```        
+        merge_data <- function(){
         # read in test data from 'x_test.txt'
         test.data <- read.table("x_test.txt")
         
@@ -52,32 +92,28 @@ merge_data <- function(){
         # add column names to all.data table
         colnames(all.data) <- features
         
-        ############### end of part 1, 3, and 4 from the course project #######################
-        
-        # Extract only the measurements on the mean and standard deviation for each measurement
-        
-        # select the index of features containing the phrase 'mean'
-        mean.index <- grep("mean", features)
-        
-        # select the index of features containing the phrase 'std'
-        std.index <- grep("std", features)
-        
-        # concatenate the mean and std indices with 1 and 2 to keep the subject
-        # number and activity type
-        feature.index <- c(1, 2, mean.index, std.index)
-        
-        # sort the feature index
-        feature.index <- sort(feature.index)
-        
-        # extract the data containing the columns in the feature index
-        extracted.data <- all.data[,feature.index]
-        
-        ############### end of part 2 from the course project #######################
-        
-        # sort the extracted data based on subject number and activity type
-        sorted.data <- extracted.data[order(extracted.data[,1], extracted.data[,2]),]
-        
-        # actions to check code above
-        sorted.data.g <<- sorted.data
-        
-}
+        ############### end of part 1 from the course project #######################
+                
+        }
+```
+
+
+
+
+
+---
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
