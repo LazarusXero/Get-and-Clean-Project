@@ -58,9 +58,13 @@ angle(): Angle between to vectors.
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
 gravityMean
+
 tBodyAccMean
+
 tBodyAccJerkMean
+
 tBodyGyroMean
+
 tBodyGyroJerkMean
 
 Final data included in this dataset took the averages of all measured values for the mean and standard deviation data only.
